@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
   base: '/Recette/',
   plugins: [
     viteSourceLocator({
-      prefix: "mgx",
+      prefix: "Recette/src/",
     }),
     react(),
   ],
