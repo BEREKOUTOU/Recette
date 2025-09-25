@@ -10,8 +10,10 @@ export interface Recipe {
   id: string;
   title: string;
   description: string;
-  dietTags: DietTag[];
-  cookTime: number;
   ingredients: string[];
+  dietTags: DietTag[];
+  instructions: string[];
+  cookTime: number;
+  prepTime: number;
   image?: string;
 }
