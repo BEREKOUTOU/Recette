@@ -7,16 +7,21 @@ import NotFound from './pages/NotFound';
 
 const queryClient = new QueryClient();
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Index />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
+  ],
   {
-    path: "/",
-    element: <Index />,
-  },
-  {
-    path: "*",
-    element: <NotFound />,
-  },
-]);
+    basename: "/Recette",
+  }
+);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
