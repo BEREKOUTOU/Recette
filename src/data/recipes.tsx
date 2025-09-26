@@ -15,11 +15,6 @@ const img12 = new URL('../assets/images/img12.jpg', import.meta.url).href;
 const img13 = new URL('../assets/images/img13.jpg', import.meta.url).href;
 const img14 = new URL('../assets/images/img14.jpg', import.meta.url).href;
 const img15 = new URL('../assets/images/img15.jpg', import.meta.url).href;
-const img16 = new URL('../assets/images/img16.jpg', import.meta.url).href;
-const img17 = new URL('../assets/images/img17.jpg', import.meta.url).href;
-const img18 = new URL('../assets/images/img18.jpg', import.meta.url).href;
-const img19 = new URL('../assets/images/img19.jpg', import.meta.url).href;
-const img20 = new URL('../assets/images/img20.jpg', import.meta.url).href;
 
 export const recipes = [
   {
@@ -264,5 +259,22 @@ export const recipes = [
     cookTime: 12,
     prepTime: 8,
     image: img14
+  },
+  {
+    id: 'r15',
+    title: 'Poulet aux pommes de terre et saucisses',
+    description:
+      'Poulet sauté aux pommes de terre et saucisses.',
+    ingredients: ['poulet', 'pommes de terre', 'saucisse', 'oignon', 'ail', 'cumin', 'paprika', 'sel', 'poivre'],
+    dietTags: ['gluten-free', 'keto', 'paleo'],
+    instructions: [
+      'Faire revenir l\'oignon et l\'ail dans une grande poêle.',
+      'Ajouter le poulet, les pommes de terre, la saucisse, le cumin, le paprika, le sel et le poivre.',
+      'Cuire jusqu\'à ce qu\'ils soient croustillants.',
+      'Servir chaud.',
+    ],
+    cookTime: 40,
+    prepTime: 10,
+    image: img15,
   }
 ] satisfies readonly Recipe[];

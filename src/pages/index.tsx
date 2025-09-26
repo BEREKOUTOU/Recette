@@ -56,6 +56,11 @@ export default function Index() {
           </div>
         </div>
       </header>
+      <div className="mx-auto max-w-7xl px-4 py-6">
+      <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-2 ">
+        Trouvez la recette parfaite pour chaque occasion !
+      </h1>
+      </div>
       <main className='mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-[320px_1fr] gap-4 md:gap-6 px-4 py-6'>
 
         <FilterPanel
@@ -80,7 +85,7 @@ export default function Index() {
          </section>
       </main>
       <footer className="mt-8 text-center text-sm text-gray-500">
-        <h2 className="text-lg font-bold text-gray-300 text-center bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Bientôt disponible</h2>   
+        <h2 className="text-lg font-bold text-gray-300 text-center bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Bonne Cuisine</h2>   
         &copy; {new Date().getFullYear()} Recherche de Recettes. Tous droits réservés.
       </footer>
     </div>
