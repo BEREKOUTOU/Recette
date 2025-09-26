@@ -1,7 +1,8 @@
 {/*home page*/}
 import {useMemo, useState} from 'react';
-import { recipes } from '../data/recipes';
-import { RecipeCard } from '../components/RecipeCard';
+import { recipes } from '@/data/recipes';
+import { RecipeCard } from '@/components/RecipeCard';
+import FilterPanel from '@/components/FilterPanel';
 import { Card } from '@/components/ui/card';
 import { DIET_OPTIONS, Filters, SORT_OPTIONS, SortBy, filterAndSortRecipes, getAllIngredients } from '@/lib/Filter';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -50,13 +51,20 @@ export default function Index() {
                     </SelectItem>
                   ))}
                 </SelectContent>
-                
               </Select>
             </div>
           </div>
         </div>
       </header>
-      <main>
+      <main className='mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-[320px_1fr] gap-4 md:gap-6 px-4 py-6'>
+
+        <FilterPanel
+          allIngredients={getAllIngredients(recipes)}
+          dietOptions={DIET_OPTIONS}
+          filters={filters}
+          onChange={handleChange}
+          onReset={() => setFilters(initialFilters)}
+        />
          <section className='w-full'>
           {filteredRecipes.length === 0 ? (
             <Card className="p-8 text-center text-muted-foreground">
